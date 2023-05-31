@@ -1,4 +1,4 @@
-# Projeto para Calculo de IMC - Indice de Massa Corporea
+# Projeto para Calculo de IMC - Índice de Massa Corporal
 Projeto criado em React JS
 
 ## Para utilizá-lo:
