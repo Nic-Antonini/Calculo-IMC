@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './App.module.css'
 import poweredImage from './assets/powered.png'
-
+import {levels, calculateImc} from './assets/helpers/imc'
 
 const App = () =>{
 
@@ -52,9 +52,15 @@ const App = () =>{
           </div>
 
           <div className={styles.rightSide}>
-            ...
+            <div className={styles.grid}>
+              {levels.map((item, key) => (
+                <div key={key}>
+                  {item.title}
+                  
+                </div>
+              ))}
+            </div>
           </div>
-
         </div>
     </div>
   )
