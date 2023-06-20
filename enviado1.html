@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHA DE CADASTRO</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+        body{
+            background-color: rgb(255, 224, 184);
+        }
+        p{
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        header{
+            background-color: rgb(255, 203, 135);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1{
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;  
+            font-size: 35px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            width: 850px;
+            height: 980px;
+        }
+
+        #nome {
+            width: 550px;
+        }
+
+        #endereco {
+            width: 550px;
+        }
+
+        #bairro {
+            width: 550px;
+        }
+
+        #cidade {
+            width: 550px;
+        }
+
+        #estado {
+            width: 555px;
+            height: 22px;
+        }
+
+        #telefone {
+            width: 550px;
+        }
+
+        #email {
+            width: 550px;
+        }
+
+        .nome{
+            padding-top: 50px;
+        }
+
+        #enviar{
+            width: 150px;
+            height: 30px;
+        }
+
+        #apagar{
+            width: 150px;
+            height: 30px;            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FICHA CADASTRAL</h1>
+    </header>
+    <main>
+        <section>
+                <form action="enviado2.html" name="form1" id="form1" method="get">
+                <p class="nome">Nome Completo: 
+                    <br>
+                    <input type="text" name="nome" id="nome">
+                </p>
+                <p>Endereço: 
+                    <br>
+                    <input type="text" name="endereco" id="endereco">
+                </p>
+                <p>Bairro:
+                    <br>
+                    <input type="text" name="bairro" id="bairro">
+                </p>
+                <p>Cidade:
+                    <br> 
+                    <input type="text" name="cidade" id="cidade">
+                </p>
+                <p class="estado">Estado: 
+                    <br>
+                    <select name="estado" id="estado">
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="ES">ES</option>
+                        <option value="MG">MG</option>
+                    </select>
+                </p>
+                <p>Telefone: 
+                    <br>
+                    <input type="text" name="telefone" id="telefone">
+                </p>
+                <p>Email: 
+                    <br>
+                    <input type="text" name="email" id="email">
+                </p>  
+                <p>Sexo:
+                    <br><br>
+                    <input type="radio" name="sexo" id="sexo" value="feminino">Feminino
+                    <input type="radio" name="sexo" id="sexo" value="masculino">Masculino
+                    <br>
+                    <input type="radio" name="sexo" id="sexo" value="nulo">Prefiro não dizer   
+                </p>
+                <p>Biografia:
+                    <br><br>
+                    <textarea name="biografia" id="" cols="35" rows="12"></textarea>
+                </p>
+                <input type="submit" value="Enviar" name="enviar" id="enviar">
+                <input type="reset" value="Apagar tudo" name="apagar" id="apagar">
+
+            </form>
+    </section>
+    </main>
+</body>
+</html>
