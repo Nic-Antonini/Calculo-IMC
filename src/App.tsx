@@ -8,10 +8,10 @@ const App = () =>{
 
     const [altura, setAltura] = useState(0);
     const [peso, setPeso] = useState(0);
+    const [toShow, settoShow] = useState(null);
 
     const handleCalc = () =>{
       if (altura && peso){
-
       }
       else{
           alert('Informe a altura e o peso')
@@ -36,6 +36,7 @@ const App = () =>{
                <br/>
 
             <input
+             className={styles.input}
              type="number"
              placeholder="Informe a altura. Ex. 1.5 (em metro)"
              value={altura > 0 ? altura: ''}
@@ -43,6 +44,7 @@ const App = () =>{
             />
 
             <input
+             className={styles.input}
              type="number"
              placeholder="Informe o peso. Ex. 60.5 (em kilo)"
              value={peso > 0 ? peso: ''}
@@ -53,13 +55,22 @@ const App = () =>{
           </div>
 
           <div className={styles.rightSide}>
-            <div className={styles.grid}>
-                 {levels.map((item, key) => (
-                  <GridItem key={key} item={item}/>
-                 ))}
-                </div>
-              
+              {!toShow &&
+              <div className={styles.grid}>
+                  {levels.map((item, key) => (
+                    <GridItem key={key} item={item}/>
+                  ))}
+                  </div>
+                  }
+                  {toShow &&
+                  <div className={styles.rightBig}>
+                    <div className={styles.rightArrow}>
+
+                    </div>
+                  </div>
+                  }
             </div>
+                 
           </div>
         </div>
   )

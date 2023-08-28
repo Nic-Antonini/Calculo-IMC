@@ -10,11 +10,23 @@
 }
 
 .gridIcon{
-    width: 150px;  
-    height: 150px; 
+    width: 90px;  
+    height: 90px; 
     border-radius: 50%;
     background-color: rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.gridTitle{
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.gridInfo{
+    text-align: center;
+    font-size: 15px;
 }
