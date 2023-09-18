@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-*{
-  box-sizing: border-box;
-  
-}
+*{box-sizing: border-box;}
 
 body{
-  font-family:'Montserrat', Arial, Helvetica, sans-serif;
-  background-color: rgb(245, 245, 245);
-  height: 800px
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
-
 
 .headerContainer{
   max-width: 900px;
@@ -17,61 +11,84 @@ body{
 }
 
 .container{
-  display: flex;
-  margin: auto;
+  display:flex;
   max-width: 900px;
+  margin: auto;
 }
 
 .container .leftSide{
-  flex: 1;
+  flex:1;
 }
 
 .container .leftSide h1{
   margin: 0;
-  font-size: 30px;
-  color: #39526b;
+  font-size: 40px;
+  color: #3A4B5C;
 }
 
 .container .leftSide p{
   font-size: 16px;
   margin-bottom: 40px;
+  color:#6A7D88;
 }
 
 .container .leftSide input{
-  background-color: rgb(245, 245, 245);
   width: 100%;
   border: 0;
-  border-bottom: 2px solid rgba(129, 129, 129, 0.5);
+  border-bottom: 2px solid rgba(150, 163, 171, .5);
   padding: 10px 2px;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 14px;
   outline: 0;
 }
 
 .container .leftSide button{
-  background-color: #227c9d;
-  border: 0;
-  border-radius: 10px;
+  background-color: #227C9D;
+  color:#FFF;
   font-size: 15px;
-  color: white;
+  border:0;
+  border-radius: 10px;
   width: 100%;
   padding: 15px 0;
+  margin-top: 40px;
   cursor: pointer;
-
+  transition: all ease .5s;
 }
 
-.container .rightSide{
-  flex: 1;
-  margin-left: 40px;
-  display: flex;
+.container .leftSide button:hover{
+  opacity: .4;
+}
 
+
+.container .rightSide{
+   flex:1;
+   margin-left: 40px;
+   display: flex;
 }
 
 .container .rightSide .grid{
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 50px;
+   flex:1;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
 }
 
+.container .rightSide .rightBig {
+  flex:1;
+  display:flex;
+}
+
+.container .rightSide .rightArrow{
+  position: absolute;
+  background-color: #227C9D;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.container .rightSide .rightArrow img{
+  margin-top: 22px;
+  margin-left: 22px;
+}

@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import styles from './App.module.css'
 import poweredImage from './assets/powered.png'
-import {levels, calculateImc} from './assets/helpers/imc'
+import left from './assets/leftarrow.png'
+import {levels, calculateImc, Level} from './assets/helpers/imc'
 import { GridItem } from './assets/components/GridItem'
 
 const App = () =>{
 
     const [altura, setAltura] = useState(0);
     const [peso, setPeso] = useState(0);
-    const [toShow, settoShow] = useState(null);
+    const [toShow, settoShow] = useState<Level | null>(null);
 
     const handleCalc = () =>{
       if (altura && peso){
+        settoShow(calculateImc(altura, peso))
       }
       else{
           alert('Informe a altura e o peso')
@@ -64,8 +66,9 @@ const App = () =>{
                   }
                   {toShow &&
                   <div className={styles.rightBig}>
+                    <GridItem item={toShow}/>
                     <div className={styles.rightArrow}>
-
+                      <img src={left} width={25}/>
                     </div>
                   </div>
                   }
