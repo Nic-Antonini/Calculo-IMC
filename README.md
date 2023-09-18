@@ -18,3 +18,5 @@ no promp de comandos
 # Execute o comando abaixo no terminal do VSCode:
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
+# Precisa Verificar!
+Não consigo posicionar a minha rightArrow, mas confesso que achei mais bonito do jeito que eu deixei. 

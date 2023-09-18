@@ -20,6 +20,12 @@ const App = () =>{
       }
     }
 
+    const handleBackButton = () =>{
+       settoShow(null);
+       setAltura(0);
+       setPeso(0);
+    }
+
   return(
     <div className={styles.main}>
       <header>
@@ -67,7 +73,7 @@ const App = () =>{
                   {toShow &&
                   <div className={styles.rightBig}>
                     <GridItem item={toShow}/>
-                    <div className={styles.rightArrow}>
+                    <div className={styles.rightArrow} onClick={handleBackButton}>
                       <img src={left} width={25}/>
                     </div>
                   </div>
